@@ -1,0 +1,365 @@
+@import url(//db.onlinewebfonts.com/c/6ab539c6fc2b21ff0b149b3d06d7f97c?family=Minecraft);
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+@import url('https://fonts.cdnfonts.com/css/arcade-classic');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes inputAnimationLight {
+    to {
+        opacity: 100%;
+        transform: scale(1.1);
+        background-color: #d0e2ea;
+        backdrop-filter: blur(5rem);
+    }
+
+    from {
+        background-color: 10% #f3f3f3;
+        opacity: 0%;
+        opacity: 10%;
+        opacity: 20%;
+        opacity: 30%;
+        opacity: 40%;
+        opacity: 50%;
+        opacity: 60%;
+        opacity: 70%;
+        opacity: 80%;
+        opacity: 90%;
+
+
+    }
+}
+
+@keyframes inputAnimation {
+    to {
+        opacity: 100%;
+        border-color: #5b5590;
+        transform: scale(1.1);
+        backdrop-filter: blur(2rem);
+    }
+
+    from {
+        opacity: 0;
+        border-color: aqua;
+
+    }
+}
+
+@keyframes iconAnimeLight {
+    to {
+        color: #ad9270;
+        opacity: 100%;
+        transform: scale(1.3);
+    }
+}
+
+@keyframes iconAnime {
+    to {
+        color: #f9f9f9;
+        opacity: 100%;
+        transform: scale(1.3);
+    }
+}
+
+@keyframes darkAnimation {
+    from{
+        filter: blur(50px);
+        filter: blur(40px);
+        filter: blur(30px);
+        filter: blur(20px);
+        filter: blur(10px);
+    }
+    to{
+        filter: blur(0px);
+    }
+}
+@keyframes lightAnimation {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.light {
+    background-image: url(https://cdn.pixabay.com/photo/2018/10/22/10/53/fog-3764991_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    animation-name: lightAnimation;
+    animation-duration: 3s;
+    .title{
+        position: relative;
+        top:5rem;
+        text-align: center;
+        font-family: Minecraft;
+        
+    }
+    .container {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        .themeButtonDark {
+            position: absolute;
+            z-index: 2;
+            margin-top: 17.2rem;
+            margin-left: 30rem;
+            font-size: 3rem;
+
+        }
+
+        .themeButtonDark:hover {
+            animation: iconAnimeLight 2s forwards;
+            cursor: pointer;
+        }
+
+        input {
+            position: absolute;
+            margin-top: 15rem;
+            padding: 2rem 4rem;
+            border-radius: 5rem;
+            font-size: 2rem;
+            font-family: 'Sigmar', cursive;
+            background-color: #f9f9f9;
+            outline-style: none;
+            border-style: none;
+        }
+
+        input:focus {
+            animation: inputAnimationLight forwards 2s;
+        }
+
+        .dataContainer {
+            top:30rem;
+            border-radius: 3rem;
+            width: 40rem;
+            height: 22rem;
+            position: absolute;
+            background-color: transparent;
+            backdrop-filter: blur(10rem);
+            z-index: 5;
+            align-self: center;
+            box-shadow: 10px 10px 5px 11px rgba(0, 0, 0, 0.50);
+        }
+
+        .name {
+            text-align: center;
+            font-family: 'Sigmar', cursive;
+            margin-bottom: 1rem;
+        }
+
+        .temp {
+            font-family: 'ArcadeClassic', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            margin-left: 2rem;
+        }
+
+        .speed {
+            font-family: 'ArcadeClassic', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            margin-left: 2rem;
+        }
+
+        .tempMax {
+            font-family: 'ArcadeClassic', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            margin-left: 2rem;
+        }
+
+        .tempMin {
+            font-family: 'ArcadeClassic', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            margin-left: 2rem;
+        }
+
+        .humidity {
+            font-family: 'ArcadeClassic', sans-serif;
+            font-size: 2rem;
+            margin-left: 2rem;
+        }
+    }
+
+    .handleError {
+        position: absolute;
+        margin-left: 35rem;
+        margin-top: 15rem;
+        align-content: center;
+        z-index: 10;
+        width: 50rem;
+        height: 30rem;
+        border-radius: 5rem;
+        background-color: #f3eae8;
+        text-align: center;
+
+        .ErrorText {
+            margin-top: 6rem;
+            margin-bottom: 4rem;
+            font-family: 'Sigmar', cursive;
+        }
+
+        .ErrorButton {
+            position: relative;
+            padding: 3rem 6rem;
+            font-family: 'ArcadeClassic', sans-serif;
+            border-radius: 2rem;
+            margin: 0 auto;
+            background-color: #76797e;
+            font-size: 3rem;
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.dark {
+    background-image: url(https://wallpapercave.com/wp/wp2763509.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    animation-name: darkAnimation;
+    animation-duration: 1s;
+    .title {
+            position: relative;
+            top: 5rem;
+            text-align: center;
+            font-family: Minecraft;
+    
+    }
+    .lightButton {
+        position: relative;
+        z-index: 2;
+        color: #8890a0;
+        font-size: 3rem;
+        align-self: center;
+        top:17.5rem;
+        margin-bottom: 3rem;
+        margin-left: 30rem;
+
+    }
+    .lightButton:hover {
+        cursor: pointer;
+        animation: iconAnime forwards 2s;
+    }
+    .container {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        input {
+            position: absolute;
+            margin-top: 15rem;
+            padding: 2rem 4rem;
+            border-radius: 5rem;
+            font-size: 2rem;
+            font-family: 'Sigmar', cursive;
+            background-color: transparent;
+            outline-style: none;
+            border-color: #5b5590;
+            color: white;
+
+        }
+
+        input:focus {
+            animation: inputAnimation forwards 2s;
+
+        }
+        .dataContainer {
+            margin-top: 80rem;
+            border-radius: 3rem;
+            width: 40rem;
+            height: 22rem;
+            position: absolute;
+            background-color: #c9d7e8;
+            z-index: 1;
+            align-self: center;
+            box-shadow: 10px 10px 5px 11px rgba(0, 0, 0, 0.75);
+        }
+
+        .name {
+            text-align: center;
+            font-family: 'Sigmar', cursive;
+            margin-bottom: 1rem;
+        }
+
+        .temp {
+            font-family: 'ArcadeClassic', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            margin-left: 2rem;
+        }
+
+        .speed {
+            font-family: 'ArcadeClassic', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            margin-left: 2rem;
+        }
+        .tempMax {
+            font-family: 'ArcadeClassic', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            margin-left: 2rem;
+        }
+        .tempMin {
+            font-family: 'ArcadeClassic', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            margin-left: 2rem;
+        }
+
+        .humidity {
+            font-family: 'ArcadeClassic', sans-serif;
+            font-size: 2rem;
+            margin-left: 2rem;
+        }
+        
+        }
+        .handleError {
+            position: absolute;
+            margin-left: 35rem;
+            margin-top: 15rem;
+            align-content: center;
+            z-index: 100;
+            width: 50rem;
+            height: 30rem;
+            border-radius: 5rem;
+            background-color: #f3eae8;
+            text-align: center;
+            .ErrorText {
+                margin-top: 6rem;
+                margin-bottom: 4rem;
+                font-family: 'Sigmar', cursive;
+            }
+            .ErrorButton {
+                position: relative;
+                padding: 3rem 6rem;
+                font-family: 'ArcadeClassic', sans-serif;
+                border-radius: 2rem;
+                margin: 0 auto;
+                background-color: #76797e;
+                font-size: 3rem;
+            }
+
+    }
+}
